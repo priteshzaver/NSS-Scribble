@@ -10,8 +10,6 @@ import { RouterLink } from 'vue-router'
     <RouterLink to="/">EXPLORE</RouterLink>
     <div class="mx-2">|</div>
     <RouterLink to="/create">CREATE</RouterLink>
-    <div class="mx-2">|</div>
-    <RouterLink to="/post/123">SOME RANDOM POST</RouterLink>
   </nav>
   <div class="main mx-auto">
     <RouterView />
