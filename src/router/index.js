@@ -14,6 +14,10 @@ const router = createRouter({
     {
       path: '/post/:id',
       component: () => import('../views/PostView.vue')
+    },
+    {
+      path: '/:pathMatch(.*)*',
+      component: () => import('../views/NotFoundView.vue')
     }
   ]
 })
