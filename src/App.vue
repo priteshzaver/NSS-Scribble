@@ -22,4 +22,7 @@ import { RouterLink } from 'vue-router'
 .main {
   max-width: 60rem;
 }
+.router-link-active {
+  font-weight: 700;
+}
 </style>
