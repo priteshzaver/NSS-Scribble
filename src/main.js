@@ -4,6 +4,9 @@ import PrimeVue from 'primevue/config'
 import 'primevue/resources/primevue.min.css'
 import 'primevue/resources/themes/mdc-light-indigo/theme.css'
 import './assets/main.css'
+import { auth } from './firebase'
+import { onAuthStateChanged } from 'firebase/auth'
+import { user } from './stores/authStore'
 
 import { createApp } from 'vue'
 import App from './App.vue'
@@ -15,3 +18,7 @@ app.use(router)
 app.use(PrimeVue)
 
 app.mount('#app')
+
+onAuthStateChanged(auth, (firebaseUser) => {
+  user.value = firebaseUser
+})
